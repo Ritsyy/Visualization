@@ -1,1 +1,1 @@
-web: gunicorn VisiMozilla.wsgi
+web: gunicorn VisulaMozilla.wsgi
