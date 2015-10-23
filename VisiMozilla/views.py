@@ -7,15 +7,15 @@ import csv
 def home(request):
 	data={}
 	data["products"]="Firefox"
-	# resultFirefox = postrequestsFirefox(data)
+	resultFirefox = postrequestsFirefox(data)
 	data["products"]="Firefox for Android"
-	# resultFirefoxForAndroid = postrequestsFirefoxForAndroid(data)
+	resultFirefoxForAndroid = postrequestsFirefoxForAndroid(data)
 	data["products"]="Firefox OS"
-	# resultFirefoxOS = postrequestsFirefoxOS(data)
+	resultFirefoxOS = postrequestsFirefoxOS(data)
 	data["products"]="Firefox for iOS"
-	# resultFirefoxForiOS = postrequestsFirefoxForiOS(data)
-	# print my_list
-	# with open("/home/richa/djangoprojects/VisualMozilla/src/static/static/data.csv", "wb") as f:
-	#     writer = csv.writer(f)
-	#     writer.writerows(my_list)
+	resultFirefoxForiOS = postrequestsFirefoxForiOS(data)
+	print my_list
+	with open("/home/richa/djangoprojects/VisualMozilla/src/static/static/data.csv", "wb") as f:
+	    writer = csv.writer(f)
+	    writer.writerows(my_list)
 	return render_to_response("index.html",locals(),context_instance=RequestContext(request))
